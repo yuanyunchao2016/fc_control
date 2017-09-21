@@ -10,6 +10,11 @@
 
 #include "algobase.h"
 #include "controller_data_type.h"
+#ifdef DEBUG
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#endif
 
 #define HIS_BUFFER_LEN 100
 
@@ -39,16 +44,17 @@ struct fc_ref_data{
 	bool dc_on_set = false;
 	double output_voltage_set = 300 ;
 	double output_max_current_set = 10 ;
-	double air_flow_rate_set = 25 ;
-	double hy_purge_set = 20 ;
-	double water_flow_rate_set = 50 ;
+	int air_flow_rate_set = 25 ;
+	int hy_purge_set = 20 ;
+	int water_flow_rate_set = 50 ;
 
-	fc_defection defect ;
+	fc_defection defect = NEW_START ;
 };
 
 
 class fc_algo_simple: public algo_base {
 private:
+	double STACK_OPEN_VOLTAGE = 140 ;
 	fc_ref_data *his_data ;
 	int cur_ptr,loop_cnt ;
 	double max_power = 30000 ;

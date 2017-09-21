@@ -32,6 +32,13 @@ void fc_algo_simple::calculate(double time_cnt){
 	cur.dc_temperature = global_status.dc_status.dc_temperature ;
 	cur.time_counter = time_cnt ;
 
+#ifdef DEBUG
+	printf("FC_ALGO_SIMPLE calculate receives global status, time_cnt:%.2f.\n",cur.time_counter);
+	printf("\tStack voltage:%.2f.Stack current:%.2f.\n",cur.stack_voltage,cur.stack_current);
+	printf("\tDCDC output voltage:%.2f. DCDC output current:%.2f.\n",cur.output_voltage,cur.output_current);
+	printf("\tDCDC temperature:%.1f.\n\n",cur.dc_temperature);
+#endif
+
 	defection_diagnose();
 	output_implement();
 	refresh_history();
@@ -42,6 +49,23 @@ void fc_algo_simple::calculate(double time_cnt){
 	global_status.air_status.air_flow_rate = cur.air_flow_rate_set ;
 	global_status.hy_status.purge_interval = cur.hy_purge_set ;
 	global_status.cooler_status.water_flow_rate = cur.water_flow_rate_set ;
+
+#ifdef DEBUG
+	char * s ;
+	switch(cur.defect){
+	case NORMAL: s = (char*)"NORMAL" ; break;
+	case NEW_START : s = (char*)"NEW_START"; break;
+	case RE_CONN: s = (char*)"RE_CONN" ; break;
+	case WARMUP: s = (char*)"WARMUP" ; break;
+	case LOW_POWER: s = (char*)"LOW_POWER" ; break;
+	default: s = (char*)"DEFAULT";
+	}
+	printf("FC_ALGO_SIMPLE calculate result. State is %s.\n",s);
+	printf("\tDCDC set is %d. V_set = %.2f. Max_current = %.2f.\n",
+			cur.dc_on_set,cur.output_voltage_set,cur.output_max_current_set);
+	printf("\tAir flow rate is %d%%. Water flow rate is %d%%. Hy purge interval is %d.\n\n",
+			cur.air_flow_rate_set,cur.water_flow_rate_set,cur.hy_purge_set);
+#endif
 }
 
 void fc_algo_simple::refresh_history(){
@@ -65,34 +89,36 @@ void fc_algo_simple::defection_diagnose(){
 	else {
 		last = his_data[cur_ptr - 1];
 	}
-	//state machine
-	switch(last.defect){
-	case NORMAL:{
-		if(if_lowpower(cur.stack_voltage,cur.stack_current)){
-			cur.defect = LOW_POWER ;
-		}
-		else if(cur.time_counter - last.time_counter > 5){
-			cur.defect = RE_CONN ;
-		}
-		else if(if_cold_system(cur.dc_temperature)){
-			cur.defect = WARMUP ;
-		}
-		else {
-			cur.defect = NORMAL ;
-		}
-		break ;
+	if(loop_cnt < 60){
+		cur.defect = NEW_START ;
 	}
-	case NEW_START:{
-		if(loop_cnt < 60){
-			cur.defect = NEW_START ;
+	else{
+		//state machine
+		switch(last.defect){
+		case NORMAL:{
+			if(if_lowpower(cur.stack_voltage,cur.stack_current)){
+				cur.defect = LOW_POWER ;
+			}
+			else if(cur.time_counter - last.time_counter > 5){
+				cur.defect = RE_CONN ;
+			}
+			else if(if_cold_system(cur.dc_temperature)){
+				cur.defect = WARMUP ;
+			}
+			else {
+				cur.defect = NORMAL ;
+			}
+			break ;
 		}
-		else {
+		case NEW_START:{
+
+
 			for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
 				ptr = cur_ptr - i ;
 				if(ptr < 0) {
 					ptr = ptr + HIS_BUFFER_LEN ;
 				}
-				if(his_data[ptr].defect != NEW_START){
+				if(his_data[ptr].defect != NEW_START || his_data[ptr].stack_voltage < STACK_OPEN_VOLTAGE){
 					//cur.defect = NEW_START ;
 					break;
 				}
@@ -108,63 +134,64 @@ void fc_algo_simple::defection_diagnose(){
 			else{
 				cur.defect = NEW_START ;
 			}
+
+			break ;
 		}
-		break ;
-	}
-	case RE_CONN :{
-		if(cur.output_current > 5){
-			//dcdc is on
-			if(if_lowpower(cur.stack_voltage,cur.stack_current)){
-				cur.defect = LOW_POWER ;
+		case RE_CONN :{
+			if(cur.output_current > 5){
+				//dcdc is on
+				if(if_lowpower(cur.stack_voltage,cur.stack_current)){
+					cur.defect = LOW_POWER ;
+				}
+				else{
+					cur.defect = NORMAL ;
+				}
 			}
 			else{
+				cur.defect = NEW_START ;
+			}
+			break ;
+		}
+		case LOW_POWER :{
+			if(!if_lowpower(cur.stack_voltage,cur.stack_current) ){
+				for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
+					ptr = cur_ptr - i ;
+					if(ptr < 0) {
+						ptr = ptr + HIS_BUFFER_LEN ;
+					}
+					if(his_data[ptr].defect == LOW_POWER
+							&&
+							!if_lowpower(his_data[ptr].stack_voltage,his_data[ptr].stack_current)){
+						//cur.defect = NEW_START ;
+						continue ;
+					}
+					else {
+						break ;
+					}
+				}
+				if(i > 60)
+					cur.defect = NORMAL ;
+				else
+					cur.defect = LOW_POWER ;
+			}
+			else{
+				cur.defect = LOW_POWER;
+			}
+			break ;
+		}
+		case WARMUP:{
+			if(!if_cold_system(cur.dc_temperature)){
 				cur.defect = NORMAL ;
 			}
+			else {
+				cur.defect = WARMUP ;
+			}
+			break ;
 		}
-		else{
+		default:{
 			cur.defect = NEW_START ;
 		}
-		break ;
-	}
-	case LOW_POWER :{
-		if(!if_lowpower(cur.stack_voltage,cur.stack_current) ){
-			for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
-				ptr = cur_ptr - i ;
-				if(ptr < 0) {
-					ptr = ptr + HIS_BUFFER_LEN ;
-				}
-				if(his_data[ptr].defect == LOW_POWER
-						&&
-						!if_lowpower(his_data[ptr].stack_voltage,his_data[ptr].stack_current)){
-					//cur.defect = NEW_START ;
-					continue ;
-				}
-				else {
-					break ;
-				}
-			}
-			if(i > 60)
-				cur.defect = NORMAL ;
-			else
-				cur.defect = LOW_POWER ;
 		}
-		else{
-			cur.defect = LOW_POWER;
-		}
-		break ;
-	}
-	case WARMUP:{
-		if(!if_cold_system(cur.dc_temperature)){
-			cur.defect = NORMAL ;
-		}
-		else {
-			cur.defect = WARMUP ;
-		}
-		break ;
-	}
-	default:{
-		cur.defect = NEW_START ;
-	}
 	}
 }
 

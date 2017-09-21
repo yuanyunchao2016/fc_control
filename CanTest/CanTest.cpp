@@ -14,12 +14,18 @@
 int main(void) {
 	printf("Start.\n");
 	fc_dcdc_servo *dc_servo = new fc_dcdc_servo(VCI_USBCAN2,0,0);
+	dc_servo->set_type(raycc);
+	fc_algo_simple *algo = new fc_algo_simple();
+	fc_controller_base *control = new fc_controller_base();
 	//dc_servo->start_servo();
 	//std::thread task_dc_servo(&fc_dcdc_servo::start_servo,dc_servo);
 	fc_linux_runner *runner = new fc_linux_runner();
 	runner->dc_servo = dc_servo ;
+	runner->algo = algo ;
+	runner->controller = control ;
 	runner->init();
 	runner->start();
-	std::this_thread::sleep_for(std::chrono::seconds(60));
+	//std::this_thread::sleep_for(std::chrono::seconds(60));
+	getchar();
 	return EXIT_SUCCESS;
 }

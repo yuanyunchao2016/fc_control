@@ -8,6 +8,8 @@
 #ifndef FCDCDCSERVO_H_
 #define FCDCDCSERVO_H_
 
+using namespace std;
+
 #include "canservo.h"
 #include "controller_data_type.h"
 

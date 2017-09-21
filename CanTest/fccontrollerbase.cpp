@@ -45,7 +45,8 @@ void fc_controller_base::stop_controller(){
 //should be called every 1s
 void fc_controller_base::calculate_state_process(algo_base * algo,double time_cnt){
 	//time_counter = time_counter + 1 ;//inc time
-	algo->calculate(time_cnt);
+	if(algo != NULL)
+		algo->calculate(time_cnt);
 }
 
 void fc_controller_base::servo_process(){
