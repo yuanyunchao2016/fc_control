@@ -1,0 +1,96 @@
+sudo ./Debug/CanTest
+Start.
+Thread 300ms is called.Current time is 1505978114.00
+Thread 500ms is called.Current time is 1505978114.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978114.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978114.00
+Thread 300ms is called.Current time is 1505978114.00
+Thread 500ms is called.Current time is 1505978115.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978115.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978115.00
+Thread 500ms is called.Current time is 1505978115.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978115.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978115.00
+Thread 300ms is called.Current time is 1505978115.00
+Thread 500ms is called.Current time is 1505978116.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978116.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978116.00
+Thread 300ms is called.Current time is 1505978116.00
+Thread 500ms is called.Current time is 1505978116.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978116.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978116.00
+Thread 500ms is called.Current time is 1505978117.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978117.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978117.00
+Thread 300ms is called.Current time is 1505978117.00
+Thread 500ms is called.Current time is 1505978117.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978117.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.Current time is 1505978117.00
+Thread 300ms is called.Current time is 1505978117.00
+Thread 500ms is called.Current time is 1505978118.00
+FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978118.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+
+Thread 300ms is called.CMakefile:18: recipe for target 'run' failed

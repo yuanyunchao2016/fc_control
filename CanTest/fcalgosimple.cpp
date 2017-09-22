@@ -23,6 +23,17 @@ fc_algo_simple::~fc_algo_simple() {
 }
 
 void fc_algo_simple::calculate(double time_cnt){
+	fc_ref_data last ;
+	if(cur_ptr == 0){
+		last = his_data[HIS_BUFFER_LEN];
+	}
+	else {
+		last = his_data[cur_ptr - 1];
+	}
+	//filter the data
+	if(time_cnt - last.time_counter < 1) {
+		return ;
+	}
 	this->loop_cnt ++ ;
 	fc_ref_data cur = his_data[cur_ptr] ;
 	cur.stack_voltage = global_status.dc_status.dc_input_voltage ;
@@ -111,8 +122,6 @@ void fc_algo_simple::defection_diagnose(){
 			break ;
 		}
 		case NEW_START:{
-
-
 			for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
 				ptr = cur_ptr - i ;
 				if(ptr < 0) {
@@ -311,6 +320,9 @@ void fc_algo_simple::normal_control(double max_power){
 		}
 		else if(cur.output_voltage > last.output_voltage_set*0.95){
 			cur.output_voltage_set = last.output_voltage_set + 1 ;
+		}
+		else if(cur.output_voltage < last.output_voltage_set*0.9){
+			cur.output_voltage_set = last.output_voltage_set - 1 ;
 		}
 		else {
 			cur.output_voltage_set = last.output_voltage_set ;
