@@ -16,6 +16,30 @@ fc_dcdc_servo::~fc_dcdc_servo() {
 	// TODO Auto-generated destructor stub
 }
 
+void fc_dcdc_servo::init_servo(){
+	can_status status = this->init();
+	int reinit_cnt = 0 ;
+	while(status.IF_OPENED == FALSE && reinit_cnt++ < 3){
+		status = this->init();
+	}
+	VCI_INIT_CONFIG config;
+	config.AccCode=0;
+	config.AccMask=0xffffffff;
+	config.Filter=1;
+	config.Mode=0;
+	if(this->type == vapel){
+		//250kbps
+		config.Timing0=0x01;
+		config.Timing1=0x1C;
+	}
+	else{
+		//500kbps
+		config.Timing0=0x00;
+		config.Timing1=0x1C;
+	}
+	this->init_can(this->can_ind,config);
+}
+
 void fc_dcdc_servo::rece_func(VCI_CAN_OBJ*rece,int len){
 	//printf("dcdc\n");
 	if(len>0 && len < 2500){
@@ -140,19 +164,19 @@ void fc_dcdc_servo::build_vapel_control_frame(VCI_CAN_OBJ * frame){
 void fc_dcdc_servo::build_vapel_set_frame(VCI_CAN_OBJ * frame){
 	frame->ID = 0x1cf2a780 ;
 	frame->DataLen = 8 ;
-	frame->Data[0] = (BYTE)((int)global_status.dc_status.v_set & 0xff) ;
-	frame->Data[1] = (BYTE)(((int)global_status.dc_status.v_set & 0xff00)>>8) ;
-	frame->Data[2] = (BYTE)((int)global_status.dc_status.max_current & 0xff) ;
-	frame->Data[3] = (BYTE)(((int)global_status.dc_status.max_current & 0xff00)>>8) ;
+	frame->Data[0] = (BYTE)((int)(global_status.dc_status.v_set*10) & 0xff) ;
+	frame->Data[1] = (BYTE)(((int)(global_status.dc_status.v_set*10) & 0xff00)>>8) ;
+	frame->Data[2] = (BYTE)((int)(global_status.dc_status.max_current*100) & 0xff) ;
+	frame->Data[3] = (BYTE)(((int)(global_status.dc_status.max_current*100) & 0xff00)>>8) ;
 }
 
 void fc_dcdc_servo::build_raycc_control_frame(VCI_CAN_OBJ * frame){
 	frame->ID = 0x1c009664;
 	frame->DataLen = 8 ;
 	frame->Data[0] = (BYTE)global_status.dc_status.set_on ;
-	frame->Data[2] = (BYTE)((int)global_status.dc_status.v_set & 0xff) ;
-	frame->Data[1] = (BYTE)(((int)global_status.dc_status.v_set & 0xff00)>>8) ;
-	frame->Data[4] = (BYTE)((int)global_status.dc_status.max_current & 0xff) ;
-	frame->Data[3] = (BYTE)(((int)global_status.dc_status.max_current & 0xff00)>>8) ;
+	frame->Data[2] = (BYTE)((int)(global_status.dc_status.v_set*10) & 0xff) ;
+	frame->Data[1] = (BYTE)(((int)(global_status.dc_status.v_set*10) & 0xff00)>>8) ;
+	frame->Data[4] = (BYTE)((int)(global_status.dc_status.max_current*10) & 0xff) ;
+	frame->Data[3] = (BYTE)(((int)(global_status.dc_status.max_current*10) & 0xff00)>>8) ;
 }
 

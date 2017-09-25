@@ -13,9 +13,9 @@
 
 class can_servo: public can_card,public servo_base {
 private:
-	int can_ind ;
 	//bool running = FALSE ;
 public:
+	int can_ind ;
 	int MAX_BUFFER_LEN = 10  ;
 	//can_servo();
 	can_servo(DWORD DeviceType,DWORD DeviceInd,int can_ind);

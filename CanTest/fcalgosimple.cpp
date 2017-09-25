@@ -220,7 +220,7 @@ void fc_algo_simple::output_implement(){
 	}
 	case NEW_START:{
 		cur.dc_on_set = false ;
-		cur.output_voltage_set = 300 ;
+		cur.output_voltage_set = 450 ;
 		cur.output_max_current_set = 10 ;
 		cur.hy_purge_set = 10 ;
 		cur.air_flow_rate_set = 25 ;
@@ -268,7 +268,7 @@ void fc_algo_simple::output_implement(){
 	}
 	default:{
 		cur.dc_on_set = false ;
-		cur.output_voltage_set = 300 ;
+		cur.output_voltage_set = 450 ;
 		cur.output_max_current_set = 10 ;
 		cur.hy_purge_set = 10 ;
 		cur.air_flow_rate_set = 25 ;
@@ -307,10 +307,10 @@ void fc_algo_simple::normal_control(double max_power){
 	cur.dc_on_set = true ;
 	if(last.dc_on_set == false){
 		//first set
-		if(last.output_voltage > 400)
+		if(last.output_voltage > 450)
 			cur.output_voltage_set = last.output_voltage ;
 		else
-			cur.output_voltage_set = 400 ;
+			cur.output_voltage_set = 450 ;
 		cur.output_max_current_set = 10 ;
 	}
 	else if(cur.output_voltage * cur.output_current < max_power * 0.95){
@@ -327,7 +327,10 @@ void fc_algo_simple::normal_control(double max_power){
 		else {
 			cur.output_voltage_set = last.output_voltage_set ;
 		}
-		if(last.output_voltage_set*last.output_max_current_set*1.01
+		if(cur.output_current < last.output_max_current_set * 0.95){
+			cur.output_current = last.output_voltage_set*last.output_max_current_set/cur.output_voltage_set ;
+		}
+		else if(last.output_voltage_set*last.output_max_current_set*1.01
 				< max_power){
 			cur.output_max_current_set =
 					last.output_voltage_set*last.output_max_current_set*1.01/cur.output_voltage_set ;
@@ -337,7 +340,7 @@ void fc_algo_simple::normal_control(double max_power){
 		}
 	}
 	else if(cur.output_voltage * cur.output_current > max_power * 1.05){
-		if(last.output_voltage_set >= 600){
+		if(last.output_voltage_set > 600){
 			cur.output_voltage_set = 600 ;
 		}
 		else {

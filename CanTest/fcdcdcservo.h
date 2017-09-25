@@ -29,6 +29,7 @@ public:
 	virtual void rece_func(VCI_CAN_OBJ *rece , int len);
 	virtual void keeplive();
 	void set_type(dc_type type);
+	virtual void init_servo();
 };
 
 #endif /* FCDCDCSERVO_H_ */
