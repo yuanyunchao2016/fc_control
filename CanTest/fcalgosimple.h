@@ -51,6 +51,7 @@ struct fc_ref_data{
 	fc_defection defect = NEW_START ;
 };
 
+extern system_status global_status ;
 
 class fc_algo_simple: public algo_base {
 private:

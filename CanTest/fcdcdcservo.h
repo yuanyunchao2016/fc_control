@@ -17,6 +17,8 @@ using namespace std;
 #include "stdio.h"
 #endif
 
+extern system_status global_status ;
+
 class fc_dcdc_servo: public can_servo {
 private :
 	dc_type type = vapel;

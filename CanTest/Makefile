@@ -1,6 +1,6 @@
 CXXFLAGS =	-O2 -g -Wall -fmessage-length=0 -std=c++11 
 
-OBJS =		cancard.o servobase.o canservo.o fcdcdcservo.o algobase.o fcalgosimple.o fccontrollerbase.o controlrunner.o fclinuxrunner.o CanTest.o
+OBJS =		cancard.o servobase.o canservo.o serialservo.o fcdcdcservo.o algobase.o fcalgosimple.o fccontrollerbase.o controlrunner.o fclinuxrunner.o CanTest.o
 
 LIBS = ./libcontrolcan.so -lpthread
 

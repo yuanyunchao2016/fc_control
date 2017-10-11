@@ -23,47 +23,46 @@ fc_algo_simple::~fc_algo_simple() {
 }
 
 void fc_algo_simple::calculate(double time_cnt){
-	fc_ref_data last ;
+	fc_ref_data *last ;
 	if(cur_ptr == 0){
-		last = his_data[HIS_BUFFER_LEN];
+		last = &his_data[HIS_BUFFER_LEN-1];
 	}
 	else {
-		last = his_data[cur_ptr - 1];
+		last = &his_data[cur_ptr - 1];
 	}
 	//filter the data
-	if(time_cnt - last.time_counter < 1) {
+	if(time_cnt - last->time_counter < 1) {
 		return ;
 	}
 	this->loop_cnt ++ ;
-	fc_ref_data cur = his_data[cur_ptr] ;
-	cur.stack_voltage = global_status.dc_status.dc_input_voltage ;
-	cur.stack_current = global_status.dc_status.dc_input_current ;
-	cur.output_voltage = global_status.dc_status.dc_output_voltage ;
-	cur.output_current = global_status.dc_status.dc_output_current ;
-	cur.dc_temperature = global_status.dc_status.dc_temperature ;
-	cur.time_counter = time_cnt ;
+	fc_ref_data *cur = &his_data[cur_ptr] ;
+	his_data[cur_ptr].stack_voltage = global_status.dc_status.dc_input_voltage ;
+	his_data[cur_ptr].stack_current = global_status.dc_status.dc_input_current ;
+	his_data[cur_ptr].output_voltage = global_status.dc_status.dc_output_voltage ;
+	his_data[cur_ptr].output_current = global_status.dc_status.dc_output_current ;
+	his_data[cur_ptr].dc_temperature = global_status.dc_status.dc_temperature ;
+	his_data[cur_ptr].time_counter = time_cnt ;
 
 #ifdef DEBUG
-	printf("FC_ALGO_SIMPLE calculate receives global status, time_cnt:%.2f.\n",cur.time_counter);
-	printf("\tStack voltage:%.2f.Stack current:%.2f.\n",cur.stack_voltage,cur.stack_current);
-	printf("\tDCDC output voltage:%.2f. DCDC output current:%.2f.\n",cur.output_voltage,cur.output_current);
-	printf("\tDCDC temperature:%.1f.\n\n",cur.dc_temperature);
+	printf("FC_ALGO_SIMPLE calculate receives global status,cur_ptr=%d, time_cnt:%.2f.\n",cur_ptr,cur->time_counter);
+	printf("\tStack voltage:%.2f.Stack current:%.2f.\n",cur->stack_voltage,cur->stack_current);
+	printf("\tDCDC output voltage:%.2f. DCDC output current:%.2f.\n",cur->output_voltage,cur->output_current);
+	printf("\tDCDC temperature:%.1f.\n\n",cur->dc_temperature);
 #endif
 
 	defection_diagnose();
 	output_implement();
-	refresh_history();
 
-	global_status.dc_status.set_on = cur.dc_on_set ;
-	global_status.dc_status.v_set = cur.output_voltage_set ;
-	global_status.dc_status.max_current = cur.output_max_current_set;
-	global_status.air_status.air_flow_rate = cur.air_flow_rate_set ;
-	global_status.hy_status.purge_interval = cur.hy_purge_set ;
-	global_status.cooler_status.water_flow_rate = cur.water_flow_rate_set ;
+	global_status.dc_status.set_on = cur->dc_on_set ;
+	global_status.dc_status.v_set = cur->output_voltage_set ;
+	global_status.dc_status.max_current = cur->output_max_current_set;
+	global_status.air_status.air_flow_rate = cur->air_flow_rate_set ;
+	global_status.hy_status.purge_interval = cur->hy_purge_set ;
+	global_status.cooler_status.water_flow_rate = cur->water_flow_rate_set ;
 
 #ifdef DEBUG
 	char * s ;
-	switch(cur.defect){
+	switch(cur->defect){
 	case NORMAL: s = (char*)"NORMAL" ; break;
 	case NEW_START : s = (char*)"NEW_START"; break;
 	case RE_CONN: s = (char*)"RE_CONN" ; break;
@@ -73,10 +72,11 @@ void fc_algo_simple::calculate(double time_cnt){
 	}
 	printf("FC_ALGO_SIMPLE calculate result. State is %s.\n",s);
 	printf("\tDCDC set is %d. V_set = %.2f. Max_current = %.2f.\n",
-			cur.dc_on_set,cur.output_voltage_set,cur.output_max_current_set);
+			cur->dc_on_set,cur->output_voltage_set,cur->output_max_current_set);
 	printf("\tAir flow rate is %d%%. Water flow rate is %d%%. Hy purge interval is %d.\n\n",
-			cur.air_flow_rate_set,cur.water_flow_rate_set,cur.hy_purge_set);
+			cur->air_flow_rate_set,cur->water_flow_rate_set,cur->hy_purge_set);
 #endif
+	refresh_history();
 }
 
 void fc_algo_simple::refresh_history(){
@@ -87,83 +87,87 @@ void fc_algo_simple::refresh_history(){
 }
 
 void fc_algo_simple::defection_diagnose(){
-	fc_ref_data cur = his_data[cur_ptr] ;
-	fc_ref_data last ;
+	fc_ref_data *cur = &his_data[cur_ptr] ;
+	fc_ref_data *last ;
 	int ptr,i ;
 	if(loop_cnt < HIS_BUFFER_LEN){
-		cur.defect = NEW_START ;
+		cur->defect = NEW_START ;
 		return ;
 	}
 	if(cur_ptr == 0){
-		last = his_data[HIS_BUFFER_LEN];
+		last = &his_data[HIS_BUFFER_LEN-1];
 	}
 	else {
-		last = his_data[cur_ptr - 1];
+		last = &his_data[cur_ptr - 1];
 	}
 	if(loop_cnt < 60){
-		cur.defect = NEW_START ;
+		cur->defect = NEW_START ;
 	}
 	else{
 		//state machine
-		switch(last.defect){
+		printf("\nlast defect:%d\n",last->defect);
+		switch(last->defect){
 		case NORMAL:{
-			if(if_lowpower(cur.stack_voltage,cur.stack_current)){
-				cur.defect = LOW_POWER ;
+			if(if_lowpower(cur->stack_voltage,cur->stack_current)){
+				cur->defect = LOW_POWER ;
 			}
-			else if(cur.time_counter - last.time_counter > 5){
-				cur.defect = RE_CONN ;
+			else if(cur->time_counter - last->time_counter > 5){
+				cur->defect = RE_CONN ;
 			}
-			else if(if_cold_system(cur.dc_temperature)){
-				cur.defect = WARMUP ;
+			else if(if_cold_system(cur->dc_temperature)){
+				cur->defect = WARMUP ;
 			}
 			else {
-				cur.defect = NORMAL ;
+				cur->defect = NORMAL ;
 			}
 			break ;
 		}
 		case NEW_START:{
-			for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
+			for(i = 1 ; i < HIS_BUFFER_LEN ; i ++){
 				ptr = cur_ptr - i ;
 				if(ptr < 0) {
 					ptr = ptr + HIS_BUFFER_LEN ;
 				}
-				if(his_data[ptr].defect != NEW_START || his_data[ptr].stack_voltage < STACK_OPEN_VOLTAGE){
+				if(his_data[ptr].defect == NEW_START && his_data[ptr].stack_voltage >= STACK_OPEN_VOLTAGE){
 					//cur.defect = NEW_START ;
+					continue;
+				}
+				else{
 					break;
 				}
 			}
 			if(i >= 60) {
-				if(if_cold_system(cur.dc_temperature)){
-					cur.defect = WARMUP ;
+				if(if_cold_system(cur->dc_temperature)){
+					cur->defect = WARMUP ;
 				}
 				else{
-					cur.defect = NORMAL ;
+					cur->defect = NORMAL ;
 				}
 			}
 			else{
-				cur.defect = NEW_START ;
+				cur->defect = NEW_START ;
 			}
 
 			break ;
 		}
 		case RE_CONN :{
-			if(cur.output_current > 5){
+			if(cur->output_current > 5){
 				//dcdc is on
-				if(if_lowpower(cur.stack_voltage,cur.stack_current)){
-					cur.defect = LOW_POWER ;
+				if(if_lowpower(cur->stack_voltage,cur->stack_current)){
+					cur->defect = LOW_POWER ;
 				}
 				else{
-					cur.defect = NORMAL ;
+					cur->defect = NORMAL ;
 				}
 			}
 			else{
-				cur.defect = NEW_START ;
+				cur->defect = NEW_START ;
 			}
 			break ;
 		}
 		case LOW_POWER :{
-			if(!if_lowpower(cur.stack_voltage,cur.stack_current) ){
-				for(i = 1 ; i <= HIS_BUFFER_LEN ; i ++){
+			if(!if_lowpower(cur->stack_voltage,cur->stack_current) ){
+				for(i = 1 ; i < HIS_BUFFER_LEN ; i ++){
 					ptr = cur_ptr - i ;
 					if(ptr < 0) {
 						ptr = ptr + HIS_BUFFER_LEN ;
@@ -179,81 +183,82 @@ void fc_algo_simple::defection_diagnose(){
 					}
 				}
 				if(i > 60)
-					cur.defect = NORMAL ;
+					cur->defect = NORMAL ;
 				else
-					cur.defect = LOW_POWER ;
+					cur->defect = LOW_POWER ;
 			}
 			else{
-				cur.defect = LOW_POWER;
+				cur->defect = LOW_POWER;
 			}
 			break ;
 		}
 		case WARMUP:{
-			if(!if_cold_system(cur.dc_temperature)){
-				cur.defect = NORMAL ;
+			if(!if_cold_system(cur->dc_temperature)){
+				cur->defect = NORMAL ;
 			}
 			else {
-				cur.defect = WARMUP ;
+				cur->defect = WARMUP ;
 			}
 			break ;
 		}
 		default:{
-			cur.defect = NEW_START ;
+			cur->defect = NEW_START ;
 		}
 		}
 	}
 }
 
 void fc_algo_simple::output_implement(){
-	fc_ref_data cur = his_data[cur_ptr] ;
-	fc_ref_data last ;
-	if(cur_ptr == 0){
-		last = his_data[HIS_BUFFER_LEN];
-	}
-	else {
-		last = his_data[cur_ptr - 1];
-	}
-	switch(cur.defect){
+	fc_ref_data *cur = &his_data[cur_ptr] ;
+//	fc_ref_data *last ;
+//	if(cur_ptr == 0){
+//		last = &his_data[HIS_BUFFER_LEN-1];
+//	}
+//	else {
+//		last = &his_data[cur_ptr - 1];
+//	}
+	switch(cur->defect){
 	case NORMAL:{
 		normal_control(this->max_power);
 		break ;
 	}
 	case NEW_START:{
-		cur.dc_on_set = false ;
-		cur.output_voltage_set = 450 ;
-		cur.output_max_current_set = 10 ;
-		cur.hy_purge_set = 10 ;
-		cur.air_flow_rate_set = 25 ;
-		cur.water_flow_rate_set = 25 ;
+		cur->dc_on_set = false ;
+		cur->output_voltage_set = 450 ;
+		cur->output_max_current_set = 10 ;
+		cur->hy_purge_set = 10 ;
+		cur->air_flow_rate_set = 25 ;
+		cur->water_flow_rate_set = 25 ;
 		break ;
 	}
 	case RE_CONN :{
-		if(cur.output_current > 5){
-			cur.output_voltage_set = cur.output_voltage ;
-			cur.output_max_current_set = cur.output_current ;
-			if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.25){
-				cur.hy_purge_set = 20 ;
-				cur.air_flow_rate_set = 50 ;
-				cur.water_flow_rate_set = 50 ;
-			}
-			else if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.5){
-				cur.hy_purge_set = 20 ;
-				cur.air_flow_rate_set = 75 ;
-				cur.water_flow_rate_set = 75 ;
-			}
-			else{
-				cur.hy_purge_set = 20 ;
-				cur.air_flow_rate_set = 100 ;
-				cur.water_flow_rate_set = 100 ;
-			}
+		if(cur->output_current > 5){
+			normal_control(max_power/4);
+//			cur.output_voltage_set = cur.output_voltage ;
+//			cur.output_max_current_set = cur.output_current ;
+//			if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.25){
+//				cur.hy_purge_set = 20 ;
+//				cur.air_flow_rate_set = 50 ;
+//				cur.water_flow_rate_set = 50 ;
+//			}
+//			else if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.5){
+//				cur.hy_purge_set = 20 ;
+//				cur.air_flow_rate_set = 75 ;
+//				cur.water_flow_rate_set = 75 ;
+//			}
+//			else{
+//				cur.hy_purge_set = 20 ;
+//				cur.air_flow_rate_set = 100 ;
+//				cur.water_flow_rate_set = 100 ;
+//			}
 		}
 		else{
-			cur.dc_on_set = false ;
-			cur.output_voltage_set = 300 ;
-			cur.output_max_current_set = 10 ;
-			cur.hy_purge_set = 10 ;
-			cur.air_flow_rate_set = 25 ;
-			cur.water_flow_rate_set = 25 ;
+			cur->dc_on_set = false ;
+			cur->output_voltage_set = 460 ;
+			cur->output_max_current_set = 10 ;
+			cur->hy_purge_set = 10 ;
+			cur->air_flow_rate_set = 25 ;
+			cur->water_flow_rate_set = 25 ;
 		}
 		break ;
 	}
@@ -267,12 +272,12 @@ void fc_algo_simple::output_implement(){
 		break ;
 	}
 	default:{
-		cur.dc_on_set = false ;
-		cur.output_voltage_set = 450 ;
-		cur.output_max_current_set = 10 ;
-		cur.hy_purge_set = 10 ;
-		cur.air_flow_rate_set = 25 ;
-		cur.water_flow_rate_set = 25 ;
+		cur->dc_on_set = false ;
+		cur->output_voltage_set = 450 ;
+		cur->output_max_current_set = 10 ;
+		cur->hy_purge_set = 10 ;
+		cur->air_flow_rate_set = 25 ;
+		cur->water_flow_rate_set = 25 ;
 	}
 	}
 }
@@ -295,77 +300,77 @@ bool fc_algo_simple::if_cold_system(double temperature){
 	}
 }
 
-void fc_algo_simple::normal_control(double max_power){
-	fc_ref_data cur = his_data[cur_ptr] ;
-	fc_ref_data last ;
+void fc_algo_simple::normal_control(double i_max_power){
+	fc_ref_data *cur = &his_data[cur_ptr] ;
+	fc_ref_data *last ;
 	if(cur_ptr == 0){
-		last = his_data[HIS_BUFFER_LEN];
+		last = &his_data[HIS_BUFFER_LEN-1];
 	}
 	else {
-		last = his_data[cur_ptr - 1];
+		last = &his_data[cur_ptr - 1];
 	}
-	cur.dc_on_set = true ;
-	if(last.dc_on_set == false){
+	cur->dc_on_set = true ;
+	if(last->dc_on_set == false){
 		//first set
-		if(last.output_voltage > 450)
-			cur.output_voltage_set = last.output_voltage ;
+		if(last->output_voltage > 450)
+			cur->output_voltage_set = last->output_voltage ;
 		else
-			cur.output_voltage_set = 450 ;
-		cur.output_max_current_set = 10 ;
+			cur->output_voltage_set = 450 ;
+		cur->output_max_current_set = 10 ;
 	}
-	else if(cur.output_voltage * cur.output_current < max_power * 0.95){
+	else if(cur->output_voltage * cur->output_current < i_max_power * 0.95){
 		//incr power
-		if(last.output_voltage_set >= 600){
-			cur.output_voltage_set = 600 ;
+		if(last->output_voltage_set >= 600){
+			cur->output_voltage_set = 600 ;
 		}
-		else if(cur.output_voltage > last.output_voltage_set*0.95){
-			cur.output_voltage_set = last.output_voltage_set + 1 ;
+		else if(cur->output_voltage > last->output_voltage_set*0.95){
+			cur->output_voltage_set = last->output_voltage_set + 1 ;
 		}
-		else if(cur.output_voltage < last.output_voltage_set*0.9){
-			cur.output_voltage_set = last.output_voltage_set - 1 ;
-		}
-		else {
-			cur.output_voltage_set = last.output_voltage_set ;
-		}
-		if(cur.output_current < last.output_max_current_set * 0.95){
-			cur.output_current = last.output_voltage_set*last.output_max_current_set/cur.output_voltage_set ;
-		}
-		else if(last.output_voltage_set*last.output_max_current_set*1.01
-				< max_power){
-			cur.output_max_current_set =
-					last.output_voltage_set*last.output_max_current_set*1.01/cur.output_voltage_set ;
+		else if(cur->output_voltage < last->output_voltage_set*0.9){
+			cur->output_voltage_set = last->output_voltage_set - 1 ;
 		}
 		else {
-			cur.output_max_current_set = max_power/cur.output_voltage_set ;
+			cur->output_voltage_set = last->output_voltage_set ;
+		}
+		if(cur->output_current < last->output_max_current_set * 0.95){
+			cur->output_current = last->output_voltage_set*last->output_max_current_set/cur->output_voltage_set ;
+		}
+		else if(last->output_voltage_set*last->output_max_current_set*1.01
+				< i_max_power){
+			cur->output_max_current_set =
+					last->output_voltage_set*last->output_max_current_set*1.01/cur->output_voltage_set ;
+		}
+		else {
+			cur->output_max_current_set = i_max_power/cur->output_voltage_set ;
 		}
 	}
-	else if(cur.output_voltage * cur.output_current > max_power * 1.05){
-		if(last.output_voltage_set > 600){
-			cur.output_voltage_set = 600 ;
+	else if(cur->output_voltage * cur->output_current > i_max_power * 1.05){
+		if(last->output_voltage_set > 600){
+			cur->output_voltage_set = 600 ;
 		}
 		else {
-			cur.output_voltage_set = last.output_voltage_set ;
+			cur->output_voltage_set = last->output_voltage_set ;
 		}
-		cur.output_max_current_set = max_power / cur.output_voltage_set ;
+		cur->output_max_current_set = i_max_power / cur->output_voltage_set ;
 	}
 	else {
-		cur.output_voltage_set = last.output_voltage_set ;
-		cur.output_max_current_set = last.output_max_current_set ;
+		cur->output_voltage_set = last->output_voltage_set ;
+		cur->output_max_current_set = last->output_max_current_set ;
 	}
-	if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.25){
-		cur.hy_purge_set = 20 ;
-		cur.air_flow_rate_set = 50 ;
-		cur.water_flow_rate_set = 50 ;
+	if(cur->output_voltage*cur->output_current < i_max_power *0.25){
+		cur->hy_purge_set = 20 ;
+		cur->air_flow_rate_set = 50 ;
+		cur->water_flow_rate_set = 50 ;
 	}
-	else if(cur.output_voltage_set*cur.output_max_current_set < max_power *0.5){
-		cur.hy_purge_set = 20 ;
-		cur.air_flow_rate_set = 75 ;
-		cur.water_flow_rate_set = 75 ;
+	else if(cur->output_voltage*cur->output_current < i_max_power *0.5){
+		cur->hy_purge_set = 20 ;
+		cur->air_flow_rate_set = 75 ;
+		cur->water_flow_rate_set = 75 ;
 	}
 	else{
-		cur.hy_purge_set = 20 ;
-		cur.air_flow_rate_set = 100 ;
-		cur.water_flow_rate_set = 100 ;
+		cur->hy_purge_set = 20 ;
+		cur->air_flow_rate_set = 100 ;
+		cur->water_flow_rate_set = 100 ;
 	}
 }
 

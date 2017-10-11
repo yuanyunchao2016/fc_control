@@ -22,12 +22,17 @@
 #include <atomic>
 #include <time.h>
 
+#include "serialservo.h"
+
+extern system_status global_status ;
+
 class fc_linux_runner: public control_runner {
 private :
 	bool running = false ;
 public:
 	fc_algo_simple *algo = NULL;
 	fc_dcdc_servo *dc_servo = NULL ;
+	serial_servo *c_servo = NULL ;
 	fc_controller_base *controller = NULL ;
 	fc_linux_runner();
 	virtual ~fc_linux_runner();

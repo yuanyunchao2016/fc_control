@@ -7,6 +7,8 @@
 
 #include "fclinuxrunner.h"
 
+system_status global_status ;
+
 fc_linux_runner::fc_linux_runner() {
 	// TODO Auto-generated constructor stub
 
@@ -32,12 +34,16 @@ void fc_linux_runner::stop(){
 void fc_linux_runner::init(){
 	if(this->controller != NULL){
 		this->controller->set_dcdc_servo(this->dc_servo);
-		this->controller->set_c_servo(NULL);
+		this->controller->set_c_servo(this->c_servo);
 	}
 	//start servo
 	if(this->dc_servo!= NULL){
 		std::thread task_dc_servo(&fc_dcdc_servo::start_servo,this->dc_servo);
 		task_dc_servo.detach();
+	}
+	if(this->c_servo!= NULL){
+		std::thread task_c_servo(&serial_servo::start_servo,this->c_servo);
+		task_c_servo.detach();
 	}
 }
 

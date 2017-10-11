@@ -85,7 +85,7 @@ enum running_stage{
 	SHUTDOWN
 };
 
-struct {
+struct system_status{
 	dcdc_status dc_status ;
 	hydrogen_sys_status hy_status ;
 	air_sys_status air_status ;
@@ -93,7 +93,7 @@ struct {
 	stack_sys_status stack_status ;
 	control_target c_target ;
 	running_stage stage;
-} global_status;
+} ;
 
 
 

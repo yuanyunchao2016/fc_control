@@ -1,96 +1,2252 @@
 sudo ./Debug/CanTest
 Start.
-Thread 300ms is called.Current time is 1505978114.00
-Thread 500ms is called.Current time is 1505978114.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978114.00.
+para:./Debug/CanTest
+Thread 300ms is called.Current time is 1507720890.00
+Serial send:$0|0|50#.
+Thread 500ms is called.Current time is 1507720890.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=0, time_cnt:1507720890.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978114.00
-Thread 300ms is called.Current time is 1505978114.00
-Thread 500ms is called.Current time is 1505978115.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978115.00.
+Thread 300ms is called.Current time is 1507720891.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.36,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720891.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720891.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=1, time_cnt:1507720891.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978115.00
-Thread 500ms is called.Current time is 1505978115.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978115.00.
+Thread 300ms is called.Current time is 1507720891.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720891.00
+Thread 300ms is called.Current time is 1507720891.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720892.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720892.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=2, time_cnt:1507720892.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978115.00
-Thread 300ms is called.Current time is 1505978115.00
-Thread 500ms is called.Current time is 1505978116.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978116.00.
+Thread 300ms is called.Current time is 1507720892.00
+Serial send:$25|25|50#.
+Thread 300ms is called.Current time is 1507720892.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720892.00
+Thread 300ms is called.Current time is 1507720893.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720893.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=3, time_cnt:1507720893.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978116.00
-Thread 300ms is called.Current time is 1505978116.00
-Thread 500ms is called.Current time is 1505978116.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978116.00.
+Thread 300ms is called.Current time is 1507720893.00
+Serial send:$25|25|50#.
+Thread 300ms is called.Current time is 1507720893.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720893.00
+Thread 300ms is called.Current time is 1507720894.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.66,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720894.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720894.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=4, time_cnt:1507720894.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978116.00
-Thread 500ms is called.Current time is 1505978117.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978117.00.
+Thread 300ms is called.Current time is 1507720894.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720894.00
+Thread 300ms is called.Current time is 1507720894.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720895.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720895.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=5, time_cnt:1507720895.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978117.00
-Thread 300ms is called.Current time is 1505978117.00
-Thread 500ms is called.Current time is 1505978117.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978117.00.
+Thread 300ms is called.Current time is 1507720895.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720895.00
+Thread 300ms is called.Current time is 1507720895.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.75,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720896.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=6, time_cnt:1507720896.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.Current time is 1505978117.00
-Thread 300ms is called.Current time is 1505978117.00
-Thread 500ms is called.Current time is 1505978118.00
-FC_ALGO_SIMPLE calculate receives global status, time_cnt:1505978118.00.
+Thread 500ms is called.Current time is 1507720896.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.45,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720897.00
+Thread 500ms is called.Current time is 1507720897.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=7, time_cnt:1507720897.00.
 	Stack voltage:0.00.Stack current:0.00.
 	DCDC output voltage:0.00. DCDC output current:0.00.
 	DCDC temperature:0.0.
 
 FC_ALGO_SIMPLE calculate result. State is NEW_START.
-	DCDC set is 0. V_set = 300.00. Max_current = 10.00.
-	Air flow rate is 25%. Water flow rate is 50%. Hy purge interval is 20.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
 
-Thread 300ms is called.CMakefile:18: recipe for target 'run' failed
+Thread 500ms is called.Current time is 1507720897.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.66,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720898.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=8, time_cnt:1507720898.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720898.00
+Thread 500ms is called.Current time is 1507720898.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.55,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720899.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=9, time_cnt:1507720899.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720899.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720899.00
+Thread 300ms is called.Current time is 1507720899.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720900.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=10, time_cnt:1507720900.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720900.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.96,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720901.00
+Thread 500ms is called.Current time is 1507720901.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=11, time_cnt:1507720901.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720901.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720902.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=12, time_cnt:1507720902.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720902.00
+Thread 500ms is called.Current time is 1507720902.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.85,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:27
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720903.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=13, time_cnt:1507720903.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720903.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720903.00
+Thread 300ms is called.Current time is 1507720903.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.43,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720904.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=14, time_cnt:1507720904.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720904.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.63,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720905.00
+Thread 500ms is called.Current time is 1507720905.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=15, time_cnt:1507720905.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720905.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720906.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=16, time_cnt:1507720906.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720906.00
+Thread 500ms is called.Current time is 1507720906.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.88,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720907.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=17, time_cnt:1507720907.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720907.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720907.00
+Thread 300ms is called.Current time is 1507720907.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.59,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720908.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=18, time_cnt:1507720908.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720908.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.54,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720909.00
+Thread 500ms is called.Current time is 1507720909.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=19, time_cnt:1507720909.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720909.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.45,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:30
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720910.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=20, time_cnt:1507720910.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720910.00
+Thread 500ms is called.Current time is 1507720910.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.83,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720911.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=21, time_cnt:1507720911.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720911.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720911.00
+Thread 300ms is called.Current time is 1507720911.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.75,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720912.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=22, time_cnt:1507720912.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720912.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.93,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720913.00
+Thread 500ms is called.Current time is 1507720913.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=23, time_cnt:1507720913.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720913.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.51,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720914.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=24, time_cnt:1507720914.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720914.00
+Thread 500ms is called.Current time is 1507720914.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.59,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720915.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=25, time_cnt:1507720915.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720915.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720915.00
+Thread 300ms is called.Current time is 1507720915.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.55,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720916.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=26, time_cnt:1507720916.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720916.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.52,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720917.00
+Thread 500ms is called.Current time is 1507720917.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=27, time_cnt:1507720917.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720917.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.47,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720918.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=28, time_cnt:1507720918.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720918.00
+Thread 500ms is called.Current time is 1507720918.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":15.01,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720919.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=29, time_cnt:1507720919.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720919.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720919.00
+Thread 300ms is called.Current time is 1507720919.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.71,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720920.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=30, time_cnt:1507720920.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720920.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.92,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720921.00
+Thread 500ms is called.Current time is 1507720921.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=31, time_cnt:1507720921.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720921.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.52,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720922.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=32, time_cnt:1507720922.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720922.00
+Thread 500ms is called.Current time is 1507720922.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.93,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720923.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=33, time_cnt:1507720923.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720923.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720923.00
+Thread 300ms is called.Current time is 1507720923.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.50,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:31
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720924.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=34, time_cnt:1507720924.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720924.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.79,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720925.00
+Thread 500ms is called.Current time is 1507720925.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=35, time_cnt:1507720925.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720925.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720926.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=36, time_cnt:1507720926.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720926.00
+Thread 500ms is called.Current time is 1507720926.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.73,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720927.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=37, time_cnt:1507720927.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720927.00
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720927.00
+Thread 300ms is called.Current time is 1507720928.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.60,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720928.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=38, time_cnt:1507720928.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720928.00
+Serial send:$25|25|50#.
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.69,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 300ms is called.Current time is 1507720929.00
+Thread 500ms is called.Current time is 1507720929.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=39, time_cnt:1507720929.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720929.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.49,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Serial send:$25|25|50#.
+Thread 500ms is called.Current time is 1507720930.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=40, time_cnt:1507720930.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 300ms is called.Current time is 1507720930.00
+Thread 500ms is called.Current time is 1507720930.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.87,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:27
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720931.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=41, time_cnt:1507720931.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720931.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720932.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=42, time_cnt:1507720932.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720932.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.91,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720933.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=43, time_cnt:1507720933.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720933.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.57,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720934.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=44, time_cnt:1507720934.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720934.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.63,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720935.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=45, time_cnt:1507720935.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720935.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.49,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720936.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=46, time_cnt:1507720936.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720936.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.61,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720937.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=47, time_cnt:1507720937.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720937.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.56,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:28
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720938.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=48, time_cnt:1507720938.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720938.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.36,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720939.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=49, time_cnt:1507720939.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720939.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.92,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720940.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=50, time_cnt:1507720940.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720940.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.91,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720941.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=51, time_cnt:1507720941.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720941.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":15.26,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720942.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=52, time_cnt:1507720942.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720942.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.87,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720943.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=53, time_cnt:1507720943.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720943.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.74,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720944.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=54, time_cnt:1507720944.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720944.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:28
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720945.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=55, time_cnt:1507720945.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720945.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.61,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720946.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=56, time_cnt:1507720946.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720946.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.83,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720947.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=57, time_cnt:1507720947.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720947.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.89,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720948.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=58, time_cnt:1507720948.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720948.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.60,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720949.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=59, time_cnt:1507720949.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720949.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.96,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720950.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=60, time_cnt:1507720950.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720950.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.43,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720951.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=61, time_cnt:1507720951.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720951.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.69,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:27
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720952.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=62, time_cnt:1507720952.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720952.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.42,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720953.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=63, time_cnt:1507720953.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720953.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.88,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720954.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=64, time_cnt:1507720954.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720954.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.83,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720955.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=65, time_cnt:1507720955.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720955.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.99,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720956.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=66, time_cnt:1507720956.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720956.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.98,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720957.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=67, time_cnt:1507720957.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720957.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.87,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720958.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=68, time_cnt:1507720958.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720958.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.85,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:27
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720959.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=69, time_cnt:1507720959.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720959.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.92,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720960.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=70, time_cnt:1507720960.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720960.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720961.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=71, time_cnt:1507720961.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720961.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.59,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720962.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=72, time_cnt:1507720962.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720962.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.65,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720963.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=73, time_cnt:1507720963.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720963.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720964.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=74, time_cnt:1507720964.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720964.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720965.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=75, time_cnt:1507720965.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720965.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.94,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:26
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720966.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=76, time_cnt:1507720966.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720966.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.69,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720967.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=77, time_cnt:1507720967.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720967.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.52,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720968.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=78, time_cnt:1507720968.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720968.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720969.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=79, time_cnt:1507720969.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720969.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.51,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720970.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=80, time_cnt:1507720970.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720970.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.75,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720971.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=81, time_cnt:1507720971.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720971.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.73,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720972.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=82, time_cnt:1507720972.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720972.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":15.13,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:26
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720973.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=83, time_cnt:1507720973.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720973.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.63,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720974.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=84, time_cnt:1507720974.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720974.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.65,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720975.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=85, time_cnt:1507720975.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720975.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.61,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720976.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=86, time_cnt:1507720976.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720976.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.69,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720977.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=87, time_cnt:1507720977.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720977.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.71,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720978.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=88, time_cnt:1507720978.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720978.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.65,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720979.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=89, time_cnt:1507720979.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720979.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.82,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:26
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720980.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=90, time_cnt:1507720980.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720980.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.82,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720981.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=91, time_cnt:1507720981.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720981.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720982.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=92, time_cnt:1507720982.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720982.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.71,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720983.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=93, time_cnt:1507720983.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720983.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.77,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720984.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=94, time_cnt:1507720984.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720984.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.80,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720985.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=95, time_cnt:1507720985.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720985.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.60,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720986.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=96, time_cnt:1507720986.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720986.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.69,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:29
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720987.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=97, time_cnt:1507720987.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720987.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.71,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720988.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=98, time_cnt:1507720988.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720988.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.63,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720989.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=99, time_cnt:1507720989.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720989.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720990.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=0, time_cnt:1507720990.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720990.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720991.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=1, time_cnt:1507720991.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720991.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.29,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720992.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=2, time_cnt:1507720992.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720992.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.64,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720993.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=3, time_cnt:1507720993.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720993.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.75,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:25
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720994.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=4, time_cnt:1507720994.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720994.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.92,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720995.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=5, time_cnt:1507720995.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720995.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.71,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720996.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=6, time_cnt:1507720996.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720996.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.56,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720997.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=7, time_cnt:1507720997.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720997.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.68,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720998.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=8, time_cnt:1507720998.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720998.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.43,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507720999.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=9, time_cnt:1507720999.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507720999.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":15.11,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721000.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=10, time_cnt:1507721000.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721000.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.54,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:30
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721001.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=11, time_cnt:1507721001.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721001.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.79,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721002.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=12, time_cnt:1507721002.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721002.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":15.03,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721003.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=13, time_cnt:1507721003.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721003.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.65,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721004.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=14, time_cnt:1507721004.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721004.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":15.03,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721005.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=15, time_cnt:1507721005.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721005.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.88,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721006.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=16, time_cnt:1507721006.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721006.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.94,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721007.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=17, time_cnt:1507721007.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721007.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.54,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:30
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721008.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=18, time_cnt:1507721008.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721008.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.70,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721009.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=19, time_cnt:1507721009.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721009.00
+RECE:{"ID":"860100001","HyTemp":27,"HyPress":14.73,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:27
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721010.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=20, time_cnt:1507721010.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721010.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.84,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721011.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=21, time_cnt:1507721011.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721011.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.88,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721012.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=22, time_cnt:1507721012.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721012.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.73,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721013.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=23, time_cnt:1507721013.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721013.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.59,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721014.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=24, time_cnt:1507721014.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721014.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.55,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:30
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721015.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=25, time_cnt:1507721015.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721015.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.55,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721016.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=26, time_cnt:1507721016.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721016.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.73,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721017.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=27, time_cnt:1507721017.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721017.00
+RECE:{"ID":"860100001","HyTemp":30,"HyPress":14.51,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:30
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721018.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=28, time_cnt:1507721018.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721018.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":15.03,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721019.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=29, time_cnt:1507721019.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721019.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.52,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721020.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=30, time_cnt:1507721020.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721020.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.94,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:26
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721021.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=31, time_cnt:1507721021.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721021.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.46,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:29
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721022.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=32, time_cnt:1507721022.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721022.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.92,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721023.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=33, time_cnt:1507721023.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721023.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.63,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721024.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=34, time_cnt:1507721024.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721024.00
+RECE:{"ID":"860100001","HyTemp":31,"HyPress":14.47,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:31
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721025.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=35, time_cnt:1507721025.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721025.00
+RECE:{"ID":"860100001","HyTemp":29,"HyPress":14.59,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:29
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721026.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=36, time_cnt:1507721026.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721026.00
+RECE:{"ID":"860100001","HyTemp":28,"HyPress":14.74,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:28
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721027.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=37, time_cnt:1507721027.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721027.00
+RECE:{"ID":"860100001","HyTemp":25,"HyPress":14.74,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:151.
+HyTemp:25
+RECE:,len:0.
+RECE:,len:0.
+Thread 500ms is called.Current time is 1507721028.00
+FC_ALGO_SIMPLE calculate receives global status,cur_ptr=38, time_cnt:1507721028.00.
+	Stack voltage:0.00.Stack current:0.00.
+	DCDC output voltage:0.00. DCDC output current:0.00.
+	DCDC temperature:0.0.
+
+
+last defect:1
+FC_ALGO_SIMPLE calculate result. State is NEW_START.
+	DCDC set is 0. V_set = 450.00. Max_current = 10.00.
+	Air flow rate is 25%. Water flow rate is 25%. Hy purge interval is 10.
+
+Thread 500ms is called.Current time is 1507721028.00
+RECE:{"ID":"860100001","HyTemp":26,"HyPress":14.75,"HyVolt":59.94,"LiVolt":59.94,"TotalCurrent":0.00,"DCInCurrent":0.00, "PWM":15, "EnvHumi":0, "EnvTemp":0},len:152.
+HyTemp:26
+RECE:,len:0.
