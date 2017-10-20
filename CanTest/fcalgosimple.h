@@ -55,10 +55,14 @@ extern system_status global_status ;
 
 class fc_algo_simple: public algo_base {
 private:
-	double STACK_OPEN_VOLTAGE = 140 ;
 	fc_ref_data *his_data ;
 	int cur_ptr,loop_cnt ;
+
+	double MAX_OUTPUT_VOLTAGE = 500 ;
+	double MIN_OUTPUT_VOLTAGE = 460 ;
+	double STACK_OPEN_VOLTAGE = 140 ;
 	double max_power = 30000 ;
+
 	void refresh_history();
 	void defection_diagnose();
 	void output_implement();
@@ -71,6 +75,7 @@ public:
 
 	virtual void calculate(double time_cnt);
 	fc_ref_data get_cur_data();
+	void set_para(double max_v, double min_v, double stack_v, double max_p);
 };
 
 #endif /* FCALGOSIMPLE_H_ */

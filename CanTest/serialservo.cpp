@@ -65,15 +65,29 @@ void serial_servo::stop_servo(){
 }
 
 void serial_servo::rece_func(void* rece,int len){
+	double v,c,p1,p2,p3,p4,t1,t2,t3,t4,t5,t6 ;
+	Document d;
 #ifdef DEBUG
 	printf("RECE:%s,len:%d.\n",(char*)rece,len);
 #endif
 	if(len>0){
-		Document d;
 		d.Parse((char*)rece);
-		Value& s = d["HyTemp"];
-		int t = s.GetInt();
-		printf("HyTemp:%d\n",t);
+		v = d["v"].GetDouble();
+		c = d["c"].GetDouble();
+		p1 = d["p1"].GetDouble();
+		p2 = d["p2"].GetDouble();
+		p3 = d["p3"].GetDouble();
+		p4 = d["p4"].GetDouble();
+		t1 = d["t1"].GetDouble();
+		t2 = d["t2"].GetDouble();
+		t3 = d["t3"].GetDouble();
+		t4 = d["t4"].GetDouble();
+		t5 = d["t5"].GetDouble();
+		t6 = d["t6"].GetDouble();
+#ifdef DEBUG
+		printf("v:%.2f,c:%.2f,p1:%.2f,p2:%.2f,p3:%.2f,p4:%.2f,t1:%.2f,t2:%.2f,t3:%.2f,t4:%.2f,t5:%.2f,t6:%.2f.\n",
+				v,c,p1,p2,p3,p4,t1,t2,t3,t4,t5,t6);
+#endif
 	}
 }
 
@@ -95,10 +109,13 @@ void serial_servo::keeplive(){
 
 int serial_servo::build_serial_frame(){
 	int air_rate,water_rate,fan_rate,w_len ;
+	double v_set,i_set ;
 	bzero(w_buf,1024);
+	v_set = global_status.dc_status.v_set ;
+	i_set = global_status.dc_status.max_current ;
 	air_rate = global_status.air_status.air_flow_rate ;
 	water_rate = global_status.cooler_status.water_flow_rate ;
 	fan_rate = global_status.cooler_status.fan_rate ;
-	w_len = sprintf(w_buf,"$%d|%d|%d#",air_rate,water_rate,fan_rate);
+	w_len = sprintf(w_buf,"$%.2f|%.2f|%d|%d|%d#",v_set,i_set,air_rate,water_rate,fan_rate);
 	return w_len ;
 }

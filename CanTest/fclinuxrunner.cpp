@@ -16,6 +16,7 @@ fc_linux_runner::fc_linux_runner() {
 
 fc_linux_runner::~fc_linux_runner() {
 	// TODO Auto-generated destructor stub
+	this->stop();
 }
 
 void fc_linux_runner::start(){
@@ -28,6 +29,11 @@ void fc_linux_runner::start(){
 
 void fc_linux_runner::stop(){
 	this->running = false ;
+	//turn off DCDC
+	global_status.dc_status.set_on = false ;
+	if(this->controller != NULL) {
+		this->controller->config_process();
+	}
 }
 
 

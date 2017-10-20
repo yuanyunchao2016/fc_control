@@ -32,6 +32,12 @@ int main(int argc,char *argv[]) {
 	fc_dcdc_servo *dc_servo = new fc_dcdc_servo(VCI_USBCAN2,0,0);
 	dc_servo->set_type(raycc);
 	fc_algo_simple *algo = new fc_algo_simple();
+	if(argc > 2){
+		int max_v,min_v,s_v,max_p ;
+		sscanf(argv[2],"%d+%d+%d+%d",&max_v,&min_v,&s_v,&max_p);
+		algo->set_para(max_v,min_v,s_v,max_p);
+	}
+
 	fc_controller_base *control = new fc_controller_base();
 
 	fc_linux_runner *runner = new fc_linux_runner();
@@ -44,6 +50,8 @@ int main(int argc,char *argv[]) {
 	runner->start();
 	//std::this_thread::sleep_for(std::chrono::seconds(60));
 	getchar();
-	c_servo->stop_servo();
+//	runner->stop();
+//	c_servo->stop_servo();
+//	dc_servo->stop_servo();
 	return EXIT_SUCCESS;
 }

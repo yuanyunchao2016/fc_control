@@ -92,6 +92,32 @@ void fc_dcdc_servo::rece_func(VCI_CAN_OBJ*rece,int len){
 				global_status.dc_status.input_voltage_under_flow 	= (rece[i].Data[2] & 0x10)>>4 ;
 				global_status.dc_status.output_current_over_flow 	= (rece[i].Data[2] & 0x20)>>5 ;
 				global_status.dc_status.communication_error 		= (rece[i].Data[2] & 0x40)>>6 ;
+#ifdef DEBUG
+				printf("Rece raycc control frame: dc_temperature: %d ; dc_on_off : %d .\n",
+						global_status.dc_status.dc_temperature, global_status.dc_status.dc_on_off);
+
+				if(global_status.dc_status.over_temperature != 0){
+					printf("\tDC over_temperature.\n");
+				}
+				if(global_status.dc_status.output_voltage_over_flow != 0){
+					printf("\tDC output_voltage_over_flow.\n");
+				}
+				if(global_status.dc_status.output_voltage_under_flow != 0){
+					printf("\tDC output_voltage_under_flow.\n");
+				}
+				if(global_status.dc_status.input_voltage_over_flow != 0){
+					printf("\tDC input_voltage_over_flow.\n");
+				}
+				if(global_status.dc_status.input_voltage_under_flow != 0){
+					printf("\tDC input_voltage_under_flow.\n");
+				}
+				if(global_status.dc_status.output_current_over_flow != 0){
+					printf("\tDC output_current_over_flow.\n");
+				}
+				if(global_status.dc_status.communication_error != 0){
+					printf("\tDC communication_error.\n");
+				}
+#endif
 				break;
 			}
 			default:{
@@ -173,10 +199,38 @@ void fc_dcdc_servo::build_vapel_set_frame(VCI_CAN_OBJ * frame){
 void fc_dcdc_servo::build_raycc_control_frame(VCI_CAN_OBJ * frame){
 	frame->ID = 0x1c009664;
 	frame->DataLen = 8 ;
+	frame->ExternFlag = 1 ;
+	int v_set,i_set ;
+	//range protection
+	if(global_status.dc_status.v_set<440){
+		v_set = 440 ;
+	}
+	else if(global_status.dc_status.v_set > 620){
+		v_set = 620 ;
+	}
+	else{
+		v_set = global_status.dc_status.v_set ;
+	}
+	if(global_status.dc_status.max_current < 2){
+		i_set = 2 ;
+	}
+	else if(global_status.dc_status.max_current > 60){
+		i_set = 60 ;
+	}
+	else {
+		i_set = global_status.dc_status.max_current ;
+	}
 	frame->Data[0] = (BYTE)global_status.dc_status.set_on ;
-	frame->Data[2] = (BYTE)((int)(global_status.dc_status.v_set*10) & 0xff) ;
-	frame->Data[1] = (BYTE)(((int)(global_status.dc_status.v_set*10) & 0xff00)>>8) ;
-	frame->Data[4] = (BYTE)((int)(global_status.dc_status.max_current*10) & 0xff) ;
-	frame->Data[3] = (BYTE)(((int)(global_status.dc_status.max_current*10) & 0xff00)>>8) ;
+	frame->Data[2] = (BYTE)((int)(v_set*10) & 0xff) ;
+	frame->Data[1] = (BYTE)(((int)(v_set*10) & 0xff00)>>8) ;
+	frame->Data[4] = (BYTE)((int)(i_set*10) & 0xff) ;
+	frame->Data[3] = (BYTE)(((int)(i_set*10) & 0xff00)>>8) ;
+#ifdef DEBUG
+	printf("Can servo build raycc control frame,Data=");
+	for(int i =0 ; i < 8 ; i ++){
+		printf("%2x",frame->Data[i]);
+	}
+	printf("\n");
+#endif
 }
 

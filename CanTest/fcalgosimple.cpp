@@ -105,7 +105,7 @@ void fc_algo_simple::defection_diagnose(){
 	}
 	else{
 		//state machine
-		printf("\nlast defect:%d\n",last->defect);
+		//printf("\nlast defect:%d\n",last->defect);
 		switch(last->defect){
 		case NORMAL:{
 			if(if_lowpower(cur->stack_voltage,cur->stack_current)){
@@ -224,7 +224,7 @@ void fc_algo_simple::output_implement(){
 	}
 	case NEW_START:{
 		cur->dc_on_set = false ;
-		cur->output_voltage_set = 450 ;
+		cur->output_voltage_set = MIN_OUTPUT_VOLTAGE ;
 		cur->output_max_current_set = 10 ;
 		cur->hy_purge_set = 10 ;
 		cur->air_flow_rate_set = 25 ;
@@ -254,7 +254,7 @@ void fc_algo_simple::output_implement(){
 		}
 		else{
 			cur->dc_on_set = false ;
-			cur->output_voltage_set = 460 ;
+			cur->output_voltage_set = MIN_OUTPUT_VOLTAGE ;
 			cur->output_max_current_set = 10 ;
 			cur->hy_purge_set = 10 ;
 			cur->air_flow_rate_set = 25 ;
@@ -273,7 +273,7 @@ void fc_algo_simple::output_implement(){
 	}
 	default:{
 		cur->dc_on_set = false ;
-		cur->output_voltage_set = 450 ;
+		cur->output_voltage_set = MIN_OUTPUT_VOLTAGE ;
 		cur->output_max_current_set = 10 ;
 		cur->hy_purge_set = 10 ;
 		cur->air_flow_rate_set = 25 ;
@@ -312,16 +312,16 @@ void fc_algo_simple::normal_control(double i_max_power){
 	cur->dc_on_set = true ;
 	if(last->dc_on_set == false){
 		//first set
-		if(last->output_voltage > 450)
+		if(last->output_voltage > MIN_OUTPUT_VOLTAGE)
 			cur->output_voltage_set = last->output_voltage ;
 		else
-			cur->output_voltage_set = 450 ;
+			cur->output_voltage_set = MIN_OUTPUT_VOLTAGE ;
 		cur->output_max_current_set = 10 ;
 	}
 	else if(cur->output_voltage * cur->output_current < i_max_power * 0.95){
 		//incr power
-		if(last->output_voltage_set >= 600){
-			cur->output_voltage_set = 600 ;
+		if(last->output_voltage_set >= MAX_OUTPUT_VOLTAGE){
+			cur->output_voltage_set = MAX_OUTPUT_VOLTAGE ;
 		}
 		else if(cur->output_voltage > last->output_voltage_set*0.95){
 			cur->output_voltage_set = last->output_voltage_set + 1 ;
@@ -345,8 +345,8 @@ void fc_algo_simple::normal_control(double i_max_power){
 		}
 	}
 	else if(cur->output_voltage * cur->output_current > i_max_power * 1.05){
-		if(last->output_voltage_set > 600){
-			cur->output_voltage_set = 600 ;
+		if(last->output_voltage_set > MAX_OUTPUT_VOLTAGE){
+			cur->output_voltage_set = MAX_OUTPUT_VOLTAGE ;
 		}
 		else {
 			cur->output_voltage_set = last->output_voltage_set ;
@@ -376,4 +376,11 @@ void fc_algo_simple::normal_control(double i_max_power){
 
 fc_ref_data fc_algo_simple::get_cur_data(){
 	return his_data[cur_ptr];
+}
+
+void fc_algo_simple::set_para(double max_v, double min_v, double stack_v, double max_p){
+	this->MAX_OUTPUT_VOLTAGE = max_v ;
+	this->MIN_OUTPUT_VOLTAGE = min_v ;
+	this->STACK_OPEN_VOLTAGE = stack_v ;
+	this->max_power = max_p ;
 }

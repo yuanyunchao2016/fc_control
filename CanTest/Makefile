@@ -15,4 +15,4 @@ clean:
 	rm -f $(OBJS) $(TARGET)
 
 run:
-	sudo $(TARGET)
+	sudo $(TARGET) /dev/ttyUSB0 500+460+140+20000
