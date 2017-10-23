@@ -36,6 +36,7 @@ private:
 	int fd;
 	char r_buf[1024];
 	char w_buf[1024];
+	int frame_id ;
 	ssize_t safe_write(int fd, const void *vptr, size_t n)
 	{
 		size_t  nleft;
@@ -84,8 +85,8 @@ private:
 			}else if (numRead == 0){    /* EOF*/
 				if (totRead == 0)        /* No bytes read so far, return 0*/
 					return 0;
-				else                    /* Some bytes read so far, add '\0'*/
-					break;
+//				else                    /* Some bytes read so far, add '\0'*/
+//					break;
 			}else{
 				if (ch == '\n')
 					break;
@@ -233,7 +234,7 @@ private:
 		case 'n':
 		case 'N':
 			options.c_cflag &= ~PARENB;//PARENB：产生奇偶位，执行奇偶校验
-			options.c_cflag &= ~INPCK;//INPCK：使奇偶校验起作用
+			//options.c_cflag &= ~INPCK;//INPCK：使奇偶校验起作用
 			break;
 			/*设为空格,即停止位为2位*/
 		case 's':

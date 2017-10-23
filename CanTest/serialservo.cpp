@@ -11,6 +11,7 @@ serial_servo::serial_servo() {
 	// TODO Auto-generated constructor stub
 	fd = -1 ;
 	ret = -1 ;
+	frame_id = 0 ;
 
 }
 
@@ -18,6 +19,7 @@ serial_servo::serial_servo(char * path) {
 	// TODO Auto-generated constructor stub
 	fd = -1 ;
 	ret = -1 ;
+	frame_id = 0 ;
 	this->path = path ;
 }
 
@@ -69,9 +71,22 @@ void serial_servo::rece_func(void* rece,int len){
 	Document d;
 #ifdef DEBUG
 	printf("RECE:%s,len:%d.\n",(char*)rece,len);
+//	for(int i =0 ; i < len ; i ++){
+//		printf("%x",((char*)rece)[i]);
+//	}
+//	printf("\n");
 #endif
 	if(len>0){
 		d.Parse((char*)rece);
+		if(d.HasParseError()){
+#ifdef DEBUG
+			printf("\tJson parse error.\n");
+#endif
+			return ;
+		}
+		if(!d.HasMember("v")){
+			return;
+		}
 		v = d["v"].GetDouble();
 		c = d["c"].GetDouble();
 		p1 = d["p1"].GetDouble();
@@ -116,6 +131,7 @@ int serial_servo::build_serial_frame(){
 	air_rate = global_status.air_status.air_flow_rate ;
 	water_rate = global_status.cooler_status.water_flow_rate ;
 	fan_rate = global_status.cooler_status.fan_rate ;
-	w_len = sprintf(w_buf,"$%.2f|%.2f|%d|%d|%d#",v_set,i_set,air_rate,water_rate,fan_rate);
+	w_len = sprintf(w_buf,"$%d:%.2f:%.2f:%d:%d#",frame_id,v_set,i_set,water_rate,air_rate);
+	frame_id ++ ;
 	return w_len ;
 }
