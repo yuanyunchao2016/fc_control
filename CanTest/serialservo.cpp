@@ -85,6 +85,9 @@ void serial_servo::rece_func(void* rece,int len){
 			return ;
 		}
 		if(!d.HasMember("v")){
+#ifdef DEBUG
+			printf("\tJson key value error.\n");
+#endif
 			return;
 		}
 		v = d["v"].GetDouble();
