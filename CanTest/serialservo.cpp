@@ -134,7 +134,7 @@ int serial_servo::build_serial_frame(){
 	air_rate = global_status.air_status.air_flow_rate ;
 	water_rate = global_status.cooler_status.water_flow_rate ;
 	fan_rate = global_status.cooler_status.fan_rate ;
-	w_len = sprintf(w_buf,"$%d:%.2f:%.2f:%d:%d#",frame_id,v_set,i_set,water_rate,air_rate);
+	w_len = sprintf(w_buf,"$%d:%d:%d:%d:%d#",frame_id,(int)v_set,(int)i_set,water_rate,air_rate);
 	frame_id ++ ;
 	return w_len ;
 }
