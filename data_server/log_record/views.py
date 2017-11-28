@@ -21,7 +21,7 @@ def list_orignal_log_table(req):
         x = PrettyTable(["utime","log"]);
         x.align["utime"]="l";
         x.align["log"]="l";
-        f_logs = ecs_orignal_log.objects.all().order_by("utime")[:100];
+        f_logs = ecs_orignal_log.objects.all().order_by("-utime")[:100];
         for f in f_logs:
             x.add_row([f.utime.ctime(),str(f.log)])
     except expression as identifier:
