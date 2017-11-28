@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from log_record.views import * ;
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r"^add_log/*",add_orignal_log),
+    url(r"^list_log/*",list_orignal_log_table),
 ]
